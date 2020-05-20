@@ -22,3 +22,7 @@ Route::resource('/category','CategoryController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/company','CompanyController');
+
+
