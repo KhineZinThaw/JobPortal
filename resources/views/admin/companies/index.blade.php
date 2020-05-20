@@ -4,7 +4,7 @@
 
     <div class="card">
         <div class="card-header">
-            <a href="{{ url('/company4/create')}}"><button class="btn btn-success float-right">+</button></a>
+            <a href="{{ url('/company/create')}}"><button class="btn btn-success float-right">+</button></a>
         </div>
         <div class="table-responsive">
         <table class="table  table-bordered">
@@ -12,8 +12,8 @@
                 <tr>
                     <th>Name</th>
                     <th>Address</th>
-                    <th>phone number</th>
-                    <th>e-mail</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -22,8 +22,8 @@
                 <tr>
                     <td>{{ $company->name }}</td>
                     <td>{{ $company->address }}</td>
-                    <td>{{ $company->phone number}}</td>
-                    <td>{{ $company->e-mail }}</td>
+                    <td>{{ $company->phonenumber}}</td>
+                    <td>{{ $company->email }}</td>
 
                     <td>
                     <form action="{{ url('/company/'.$company->id) }}" method="POST">
