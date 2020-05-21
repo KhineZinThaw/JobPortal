@@ -20,7 +20,7 @@ class CreateJobsTable extends Migration
             $table->integer('salary');
             $table->text('requirement');
             $table->text('description');
-            $table->integer('category_id');
+            $table->integer('category_id')->nullable();
             $table->integer('company_id');
             $table->timestamps();
         });

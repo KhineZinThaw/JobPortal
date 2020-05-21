@@ -58,7 +58,7 @@
                                 </div>
                             </div>
                             
-                            <div class="col-sm-3">
+                            <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="col-form-label" for="requirement">Requirement</label><br>
                                     <textarea class="form-control @error('requirement') is-invalid @enderror" name="requirement" id="requirement" required>{{ old('requirement')  ??  $job->requirement ?? '' }}</textarea>
@@ -70,7 +70,7 @@
                                 </div>
                             </div>
 
-                           <div class="col-sm-3">
+                           <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="col-form-label" for="description">Description</label><br>
                                     <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" required>{{ old('description')  ??  $job->description ?? '' }}</textarea>
@@ -83,13 +83,12 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="category_id">Category_id</label>
-                                    <input class="form-control @error('category_id') is-invalid @enderror" name="category_id" id="category_id" type="text" placeholder="Enter category_id" value="{{ old('category_id')  ??  $job->category_id ?? '' }}" required>
-                                    @error('category_id')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $category_id }}</strong>
-                                        </span>
-                                    @enderror
+                                    <label for="category_name">Category Name</label>
+                                    <select name="category_id" id="category_id">
+                                        @foreach($categories as $category)
+                                        <option value="{{$category->id}}">{{$category->name}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-sm-6">

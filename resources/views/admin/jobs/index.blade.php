@@ -15,8 +15,6 @@
                     <th>Salary</th>
                     <th>Requirement</th>
                     <th>Description</th>
-                    <th>Category_id</th>
-                    <th>Company_id</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -28,8 +26,6 @@
                     <td>{{ $job->salary }}</td>
                     <td>{{ $job->requirement }}</td>
                     <td>{{ $job->description }}</td>
-                    <td>{{ $job->category_id }}</td>
-                    <td>{{ $job->company_id}}</td>
                     <td>
                     <form action="{{ url('/job/'.$job->id) }}" method="POST">
                         @csrf
