@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Company;
+use App\Job;
 
-class CompanyController extends Controller
+
+class JobController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,9 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies=Company::all();
-        return view('admin.companies.index',compact('companies'));
+        
+        $jobs= Job::all();
+        return view('admin.jobs.index',compact('jobs'));
     }
 
     /**
@@ -25,7 +27,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('admin.companies.create-edit');
+        return view('admin.jobs.create-edit');
     }
 
     /**
@@ -36,8 +38,8 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        Company::create($request->all());
-        return redirect('/company');
+        Job::create($request->all());
+        return redirect('/job');
     }
 
     /**
@@ -59,8 +61,8 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
-        $company=Company::findorfail($id);
-        return view('admin.companies.create-edit',compact('company'));
+        $job=Job::findorfail($id);
+        return view('admin.jobs.create-edit',compact('job'));
     }
 
     /**
@@ -72,9 +74,10 @@ class CompanyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company=Company::findorfail($id);
-        $company->update($request->all());
-        return redirect('/company');
+         $job=Job::findorfail($id);
+        $job->update($request->all());
+        return redirect('/job');
+        
     }
 
     /**
@@ -85,8 +88,8 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        $company=Company::findorfail($id);
-        $company->delete();
-        return redirect('/company'); 
+        $job=Job::findorfail($id);
+        $job->delete();
+        return redirect('/job');
     }
 }

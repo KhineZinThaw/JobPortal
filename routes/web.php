@@ -25,4 +25,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/company','CompanyController');
 
+Route::resource('/job','JobController');
+
 

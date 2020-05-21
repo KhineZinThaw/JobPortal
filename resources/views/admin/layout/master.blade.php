@@ -190,6 +190,10 @@
                   <a class="nav-link" href="{{ url('/company') }}">
                     <i class="nav-icon icon-list"></i> Company</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/job') }}">
+                    <i class="nav-icon icon-list"></i> Job</a>
+                </li>
              
             </li>
 
