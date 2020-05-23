@@ -20,8 +20,7 @@ class CreateCVSTable extends Migration
             $table->string('motherName');
             $table->text('requirement');
             $table->text('description');
-            $table->integer('category_id');
-            $table->integer('company_id');
+            
             $table->timestamps();
         });
     }
