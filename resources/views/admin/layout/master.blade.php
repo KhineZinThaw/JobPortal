@@ -194,6 +194,10 @@
                   <a class="nav-link" href="{{ url('/job') }}">
                     <i class="nav-icon icon-list"></i> Job</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/cv') }}">
+                    <i class="nav-icon icon-list"></i> CV</a>
+                </li>
              
             </li>
 

@@ -93,13 +93,18 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="company_id">Company_id</label>
-                                    <input class="form-control @error('company_id') is-invalid @enderror" name="company_id" id="company_id" type="text" placeholder="Enter company_id" value="{{ old('company_id')  ??  $job->company_id ?? '' }}" required>
-                                    @error('company_id')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $company_id }}</strong>
-                                        </span>
-                                    @enderror
+                                    <label for="company_name">Company Name</label>
+                                    <select name="company_id" id="company_id">
+                                        @foreach($companies as $company)
+                                        <option value="{{$company->id}}">{{$company->name}}</option>
+                                        @endforeach
+                                    </select>
+                                    
+
+
+
+                                
+                                
                                 </div>
                             </div>
                             

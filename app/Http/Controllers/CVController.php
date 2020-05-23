@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Company;
+use App\CV;
 
-class CompanyController extends Controller
+class CVController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        $companies=Company::all();
-        return view('admin.companies.index',compact('companies'));
+        $cvs= CV::all();
+        return view('admin.cvs.index',compact('cvs'));
     }
 
     /**
@@ -24,9 +24,10 @@ class CompanyController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+    
     {
+        return view('admin.cvs.create-edit');
         
-        return view('admin.companies.create-edit');
     }
 
     /**
@@ -37,8 +38,8 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        Company::create($request->all());
-        return redirect('/company');
+        CV::create($request->all());
+        return redirect('/cv');
     }
 
     /**
@@ -60,8 +61,8 @@ class CompanyController extends Controller
      */
     public function edit($id)
     {
-        $company=Company::findorfail($id);
-        return view('admin.companies.create-edit',compact('company'));
+        $cv=CV::findorfail($id);
+        return view('admin.cvs.create-edit',compact('cv'));
     }
 
     /**
@@ -73,9 +74,9 @@ class CompanyController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company=Company::findorfail($id);
-        $company->update($request->all());
-        return redirect('/company');
+        $cv=CV::findorfail($id);
+        $cv->update($request->all());
+        return redirect('/cv');
     }
 
     /**
@@ -86,8 +87,9 @@ class CompanyController extends Controller
      */
     public function destroy($id)
     {
-        $company=Company::findorfail($id);
-        $company->delete();
-        return redirect('/company'); 
+        $cv=CV::findorfail($id);
+        $cv->delete();
+        return redirect('/cv');
+        
     }
 }

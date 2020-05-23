@@ -27,4 +27,6 @@ Route::resource('/company','CompanyController');
 
 Route::resource('/job','JobController');
 
+Route::resource('/cv','CVController');
+
 

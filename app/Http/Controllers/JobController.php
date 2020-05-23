@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Job;
 use App\Category;
+use App\Company;
 
 class JobController extends Controller
 {
@@ -28,7 +29,9 @@ class JobController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.jobs.create-edit',compact('categories'));
+        $companies = Company::all();
+
+        return view('admin.jobs.create-edit',compact('categories'),compact('companies'));
     }
 
     /**
