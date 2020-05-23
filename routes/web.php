@@ -14,7 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $categories=App\Category::all();
+    return view('client.index',compact('categories'));
+});
+
+Route::get('/about', function () {
+    return view('client.about');
 });
 
 Route::resource('/category','CategoryController');
