@@ -72,6 +72,17 @@
                                 </div>
                             </div>
 
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="type">Location</label>
+                                    <select name="location_id" id="location_id">
+                                        @foreach($locations as $location)
+                                        <option value="{{$location->id}}">{{$location->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 

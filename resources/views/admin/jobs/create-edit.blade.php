@@ -99,12 +99,17 @@
                                         <option value="{{$company->id}}">{{$company->name}}</option>
                                         @endforeach
                                     </select>
-                                    
+                               </div>
+                            </div>
 
-
-
-                                
-                                
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="type">Type</label>
+                                    <select name="type_id" id="type_id">
+                                        @foreach($types as $type)
+                                        <option value="{{$type->id}}">{{$type->name}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                             </div>
                             

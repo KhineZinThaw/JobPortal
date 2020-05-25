@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Job;
-use App\Category;
-use App\Company;
-use App\Type;
+use App\Location;
 
-class JobController extends Controller
+class LocationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +14,8 @@ class JobController extends Controller
      */
     public function index()
     {
-        
-        $jobs= Job::all();
-        return view('admin.jobs.index',compact('jobs'));
+        $locations=Location::all();
+        return view('admin.locations.index',compact('locations'));
     }
 
     /**
@@ -29,12 +25,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        $companies = Company::all();
-        $types= Type::all();
-
-
-        return view('admin.jobs.create-edit',compact('categories','companies','types'));
+        return view('admin.locations.create-edit');
     }
 
     /**
@@ -45,8 +36,9 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        Job::create($request->all());
-        return redirect('/job');
+        
+        Location::create($request->all());
+        return redirect('/location');
     }
 
     /**
@@ -67,9 +59,10 @@ class JobController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        $job=Job::findorfail($id);
-        return view('admin.jobs.create-edit',compact('job'));
+    { $location=Location::findorfail($id);
+        return view('admin.locations.create-edit',compact('location'));
+
+        
     }
 
     /**
@@ -81,10 +74,9 @@ class JobController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $job=Job::findorfail($id);
-        $job->update($request->all());
-        return redirect('/job');
-        
+        $location=Location::findorfail($id);
+        $location->update($request->all());
+        return redirect('/location');
     }
 
     /**
@@ -95,8 +87,8 @@ class JobController extends Controller
      */
     public function destroy($id)
     {
-        $job=Job::findorfail($id);
-        $job->delete();
-        return redirect('/job');
+        $location=location::findorfail($id);
+        $location->delete();
+        return redirect('/location');
     }
 }

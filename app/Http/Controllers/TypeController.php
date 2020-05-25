@@ -3,12 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Job;
-use App\Category;
-use App\Company;
 use App\Type;
 
-class JobController extends Controller
+class TypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,9 +14,8 @@ class JobController extends Controller
      */
     public function index()
     {
-        
-        $jobs= Job::all();
-        return view('admin.jobs.index',compact('jobs'));
+        $types=Type::all();
+        return view('admin.types.index',compact('types'));
     }
 
     /**
@@ -29,12 +25,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        $companies = Company::all();
-        $types= Type::all();
-
-
-        return view('admin.jobs.create-edit',compact('categories','companies','types'));
+        return view('admin.types.create-edit');
     }
 
     /**
@@ -45,8 +36,9 @@ class JobController extends Controller
      */
     public function store(Request $request)
     {
-        Job::create($request->all());
-        return redirect('/job');
+        
+        Type::create($request->all());
+        return redirect('/type');
     }
 
     /**
@@ -68,8 +60,8 @@ class JobController extends Controller
      */
     public function edit($id)
     {
-        $job=Job::findorfail($id);
-        return view('admin.jobs.create-edit',compact('job'));
+        $type=Type::findorfail($id);
+        return view('admin.types.create-edit',compact('type'));
     }
 
     /**
@@ -81,10 +73,9 @@ class JobController extends Controller
      */
     public function update(Request $request, $id)
     {
-         $job=Job::findorfail($id);
-        $job->update($request->all());
-        return redirect('/job');
-        
+        $type=Type::findorfail($id);
+        $type->update($request->all());
+        return redirect('/type');
     }
 
     /**
@@ -95,8 +86,9 @@ class JobController extends Controller
      */
     public function destroy($id)
     {
-        $job=Job::findorfail($id);
-        $job->delete();
-        return redirect('/job');
+        
+        $type=type::findorfail($id);
+        $type->delete();
+        return redirect('/type');
     }
 }

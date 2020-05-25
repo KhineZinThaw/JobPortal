@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Company;
+use App\Location;
 
 class CompanyController extends Controller
 {
@@ -25,8 +26,8 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        
-        return view('admin.companies.create-edit');
+        $locations = Location::all();
+        return view('admin.companies.create-edit',compact('locations'));
     }
 
     /**

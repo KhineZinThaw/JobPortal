@@ -34,4 +34,9 @@ Route::resource('/job','JobController');
 
 Route::resource('/cv','CVController');
 
+Route::resource('/type','TypeController');
+
+Route::resource('/location','LocationController');
+
+
 

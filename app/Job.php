@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Job extends Model
 {
-    protected $guarded=['category','company'];
+    protected $guarded=['category','company','type'];
 
     public function category()
     {
@@ -16,5 +16,11 @@ class Job extends Model
     public function company()
     {
         return $this->belongsTo('App\Company','company_id');
+    
+    }
+    
+    public function type()
+    {
+        return $this->belongsTo('App\Type','type_id');
     }
 }
