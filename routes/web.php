@@ -38,6 +38,7 @@ Route::prefix('admin')->group(function () {
     Route::resource('/cv','Admin\CVController');
     Route::resource('/type','Admin\TypeController');
     Route::resource('/location','Admin\LocationController');
+    Route::resource('/experience_level','Admin\Experience_levelController');
     //Bitfumes
     Route::GET('/home', 'Admin\AdminController@index')->name('admin.home');
     // Login and Logout

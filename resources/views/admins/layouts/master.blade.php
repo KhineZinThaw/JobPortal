@@ -213,6 +213,10 @@
                     <i class="nav-icon icon-list"></i> Location</a>
                 </li>
              
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/admin/experience_level') }}">
+                    <i class="nav-icon icon-list"></i> Experience_level</a>
+                </li>
             </li>
 
             </li>
