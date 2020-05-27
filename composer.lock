@@ -117,20 +117,6 @@
                 "laravel roles permissions",
                 "multiauth"
             ],
-            "funding": [
-                {
-                    "url": "https://www.paypal.me/bitfumes",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/sarthaksavvy",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/bitfumes",
-                    "type": "patreon"
-                }
-            ],
             "time": "2020-03-27T18:21:20+00:00"
         },
         {
@@ -5559,6 +5545,5 @@
     "platform": {
         "php": "^7.2.5"
     },
-    "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "platform-dev": []
 }

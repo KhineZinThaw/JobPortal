@@ -84,20 +84,20 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="category_name">Category Name</label>
-                                    <select name="category_id" id="category_id">
+                                    <select name="category_id" id="category_id" class="form-control">
                                         @foreach($categories as $category)
                                         <option value="{{$category->id}}">{{$category->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="company_name">Company Name</label>
-                                    <select name="company_id" id="company_id">
+                                    <select name="company_id" id="company_id" class="form-control">
                                         @foreach($companies as $company)
                                         <option value="{{$company->id}}">{{$company->name}}</option>
                                         @endforeach
@@ -105,10 +105,10 @@
                                </div>
                             </div>
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="type">Type</label>
-                                    <select name="type_id" id="type_id">
+                                    <select name="type_id" id="type_id" class="form-control">
                                         @foreach($types as $type)
                                         <option value="{{$type->id}}">{{$type->name}}</option>
                                         @endforeach

@@ -1,25 +1,22 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Category;
-class CategoryController extends Controller
+use App\Experience_level;
+
+class Experience_levelController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth:admin');
-        $this->middleware('role:super');
-    }
-    
     public function index()
     {
-        $categories= Category::all();
-        return view('admins.categories.index',compact('categories'));
+        
+        $experience_levels=Experience_level::all();
+        return view('admins.experience_levels.index',compact('experience_levels'));
     }
 
     /**
@@ -29,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('admins.categories.create-edit');
+        return view('admins.experience_levels.create-edit');
     }
 
     /**
@@ -40,8 +37,8 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        Category::create($request->all());
-        return redirect('/admin/category');
+        Experience_level::create($request->all());
+        return redirect('/admin/experience_level');
     }
 
     /**
@@ -63,8 +60,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $category=Category::findorfail($id);
-        return view('admins.categories.create-edit',compact('category'));
+        $lexperience_level=Experience_level::findorfail($id);
+        return view('admins.experience_levels.create-edit',compact('experience_level'));
     }
 
     /**
@@ -76,10 +73,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category=Category::findorfail($id);
-        $category->update($request->all());
-        return redirect('/admin/category');
+
+        $experience_level=Experience_level::findorfail($id);
+        $experience_level->update($request->all());
+        return redirect('/admin/experience_level');
     }
+        
+    
 
     /**
      * Remove the specified resource from storage.
@@ -89,8 +89,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        $category=Category::findorfail($id);
-        $category->delete();
-        return redirect('/admin/category');
+        $experienexperience_levelce_level=Experience_level::findorfail($id);
+        $location->delete();
+        return redirect('/admin/experience_level');
     }
 }
