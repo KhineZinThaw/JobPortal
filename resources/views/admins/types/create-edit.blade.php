@@ -14,11 +14,11 @@
                         @if(empty($type->id))
                         <strong>Type </strong>
                         <small>Create Form</small>
-                        <form action="{{ url('/type') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ url('admin/type') }}" method="POST" enctype="multipart/form-data">
                         @else
                         <strong>Type</strong>
                         <small>Update Form</small>
-                        <form action="{{ url('/type/'.$type->id) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ url('admin/type/'.$type->id) }}" method="POST" enctype="multipart/form-data">
                         @method('PATCH')
                         @endif
                         @csrf

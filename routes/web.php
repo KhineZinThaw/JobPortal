@@ -18,6 +18,8 @@ Route::get('/', function () {
     return view('client.index',compact('categories'));
 });
 
+
+
 Route::get('/about', function () {
     return view('client.about');
 });

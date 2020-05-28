@@ -37292,13 +37292,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! E:\xampp\htdocs\jobportal\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! E:\xampp\htdocs\jobportal\resources\sass\app.scss */"./resources/sass/app.scss");
-=======
-__webpack_require__(/*! C:\xampp\htdocs\JobPortal\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\JobPortal\resources\sass\app.scss */"./resources/sass/app.scss");
->>>>>>> aec62c19c5d4d8f4f6c614a690a374ca5a2632ec
 
 
 /***/ })

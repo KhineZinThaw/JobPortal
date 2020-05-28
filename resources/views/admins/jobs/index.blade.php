@@ -32,10 +32,10 @@
                     <td>{{ $job->requirement }}</td>
                     <td>{{ $job->description }}</td>
                     <td>
-                    <form action="{{ url('admin//job/'.$job->id) }}" method="POST">
+                    <form action="{{ url('admin/job/'.$job->id) }}" method="POST">
                         @csrf
                         @method('delete')
-                        <a class="btn btn-info btn-sm mb-1" href="{{ url('admin//job/'.$job->id.'/edit') }}">
+                        <a class="btn btn-info btn-sm mb-1" href="{{ url('admin/job/'.$job->id.'/edit') }}">
                         <i class="fa fa-edit"></i>
                         </a>
                         <button class="btn btn-danger btn-sm mb-1" onclick="myFunction()"><i class="fa fa-trash"></i></button>

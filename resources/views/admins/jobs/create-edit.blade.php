@@ -64,7 +64,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="col-form-label" for="requirement">Requirement</label><br>
-                                    <textarea class="form-control @error('requirement') is-invalid @enderror" name="requirement" id="requirement" required>{{ old('requirement')  ??  $job->requirement ?? '' }}</textarea>
+                                    <textarea class="form-control @error('requirement') is-invalid @enderror" name="requirement" id="requirement" value="{{ old('requirement')  ??  $job->requirement ?? '' }}" required></textarea>
                                     @error('requirement')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $requirement }}</strong>
@@ -76,7 +76,7 @@
                            <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="col-form-label" for="description">Description</label><br>
-                                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" required>{{ old('description')  ??  $job->description ?? '' }}</textarea>
+                                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description" value="{{ old('description')  ??  $job->description ?? '' }}" required></textarea>
                                     @error('description')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $description }}</strong>
@@ -87,11 +87,19 @@
                             <div class="col-sm-4">
                                 <div class="form-group">
                                     <label for="category_name">Category Name</label>
-                                    <select name="category_id" id="category_id" class="form-control">
+                                       
                                         @foreach($categories as $category)
+                                        <select name="category_id" id="category_id" class="form-control" value="{{ old('category_id')  ??  $job->category_id ?? '' }}" required>
                                         <option value="{{$category->id}}">{{$category->name}}</option>
+                                        </select>
                                         @endforeach
-                                    </select>
+                                        
+                                   
+                                         @error('category_id')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $category_id }}</strong>
+                                        </span>
+                                        @enderror
                                 </div>
                             </div>
                             <div class="col-sm-4">
