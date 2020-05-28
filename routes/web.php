@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $categories=App\Category::all();
-    return view('client.index',compact('categories'));
+    $jobs=App\Job::all();
+    return view('client.index',compact('categories','jobs'));
 });
 
 

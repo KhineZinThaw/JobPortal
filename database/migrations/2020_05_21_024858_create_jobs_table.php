@@ -23,6 +23,7 @@ class CreateJobsTable extends Migration
             $table->integer('category_id');
             $table->integer('company_id');
             $table->integer('type_id');
+            //$table->integer('experience_level_id')->nullable();
             $table->timestamps();
         });
     }

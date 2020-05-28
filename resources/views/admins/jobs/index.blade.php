@@ -15,6 +15,8 @@
                 <tr>
                     <th>Name</th>
                     <th>Category</th>
+                    <th>Company</th>
+                    <th>Type</th>
                     <th>Position</th>
                     <th>Salary</th>
                     <th>Requirement</th>
@@ -27,6 +29,8 @@
                 <tr>
                     <td>{{ $job->name }}</td>
                     <td>{{ $job->category['name'] }}</td>
+                    <td>{{ $job->company['name'] }}</td>
+                    <td>{{ $job->type['name'] }}</td>
                     <td>{{ $job->position }}</td>
                     <td>{{ $job->salary }}</td>
                     <td>{{ $job->requirement }}</td>

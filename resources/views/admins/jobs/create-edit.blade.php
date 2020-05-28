@@ -115,7 +115,7 @@
 
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="type">Type</label>
+                                    <label for="type"> Job Type</label>
                                     <select name="type_id" id="type_id" class="form-control">
                                         @foreach($types as $type)
                                         <option value="{{$type->id}}">{{$type->name}}</option>

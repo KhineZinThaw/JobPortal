@@ -51,9 +51,7 @@
     <!-- END nav -->
 	
     
-    <div class="hero-wrap js-fullheight" style="background-image: url('client/images/image14.jpg');" data-stellar-background-ratio="0.5">
     
-    </div>
 
     @yield('index')
 

@@ -1,5 +1,18 @@
 @extends('client.layouts.client')
 @section('index')
+<div class="hero-wrap js-fullheight" style="background-image: url('client/images/image14.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-xl-10 ftco-animate mb-5 pb-5" data-scrollax=" properties: { translateY: '70%' }">
+          	
+            <h1 class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About</span></h1>
+          </div>  
+        </div> 
+        </div>   
+
+        
+  
 <section class="ftco-about d-md-flex">
     	<div class="one-half img" style="background-image: url(client/images/about.jpg);"></div>
     	<div class="one-half ftco-animate">
