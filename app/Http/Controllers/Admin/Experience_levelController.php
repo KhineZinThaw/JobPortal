@@ -60,7 +60,7 @@ class Experience_levelController extends Controller
      */
     public function edit($id)
     {
-        $lexperience_level=Experience_level::findorfail($id);
+        $php=Experience_level::findorfail($id);
         return view('admins.experience_levels.create-edit',compact('experience_level'));
     }
 

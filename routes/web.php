@@ -24,6 +24,22 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('client.about');
 });
+Route::get('/blog', function () {
+    return view('client.blog');
+});
+
+Route::get('/contact', function () {
+    return view('client.contact');
+});
+
+Route::get('/new-post', function () {
+    return view('client.new-post');
+});
+
+Route::get('/job-post', function () {
+    return view('client.job-post');
+});
+
 
 
 

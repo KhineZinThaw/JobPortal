@@ -84,22 +84,16 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="category_name">Category Name</label>
+                                    <label for="category_id">Category Name</label>
                                        
+                                    <select name="category_id" id="category_id" class="form-control">
                                         @foreach($categories as $category)
-                                        <select name="category_id" id="category_id" class="form-control" value="{{ old('category_id')  ??  $job->category_id ?? '' }}" required>
                                         <option value="{{$category->id}}">{{$category->name}}</option>
-                                        </select>
                                         @endforeach
-                                        
-                                   
-                                         @error('category_id')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $category_id }}</strong>
-                                        </span>
-                                        @enderror
+                                    </select>
+               
                                 </div>
                             </div>
                             <div class="col-sm-4">

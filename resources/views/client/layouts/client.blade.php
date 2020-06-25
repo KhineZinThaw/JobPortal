@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JobPortal - Free Bootstrap 4 Template by Colorlib</title>
+    <title>JobPortal System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -39,10 +39,10 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="{{url('about')}}" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta mr-md-2"><a href="new-post.html" class="nav-link">Post a Job</a></li>
-	          <li class="nav-item cta cta-colored"><a href="job-post.html" class="nav-link">Want a Job</a></li>
+	          <li class="nav-item"><a href="{{url('blog')}}" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="{{url('contact')}}" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta mr-md-2"><a href="{{url('new-post')}}" class="nav-link">Post a Job</a></li>
+	          <li class="nav-item cta cta-colored"><a href="{{url('job-post')}}" class="nav-link">Want a Job</a></li>
 
 	        </ul>
 	      </div>

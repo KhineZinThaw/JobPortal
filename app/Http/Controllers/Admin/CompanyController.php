@@ -62,7 +62,8 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $company=Company::findorfail($id);
-        return view('admins.companies.create-edit',compact('company'));
+        $locations=Location::all();
+        return view('admins.companies.create-edit',compact('company','locations'));
     }
 
     /**

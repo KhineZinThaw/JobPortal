@@ -77,8 +77,8 @@
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label for="type">Location</label>
-                                    <select name="location_id" id="location_id">
+                                    <label for="location_id">Location</label>
+                                    <select name="location_id" id="location_id" class="form-control">
                                         @foreach($locations as $location)
                                         <option value="{{$location->id}}">{{$location->name}}</option>
                                         @endforeach

@@ -30,7 +30,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label for="name">Experience_level</label>
-                                    <input class="form-control @error('name') is-invalid @enderror" name="name" id="name" type="text" placeholder="Enter Experience_level" value="{{ old('name')  ??  $type->name ?? '' }}" required>
+                                    <input class="form-control @error('name') is-invalid @enderror" name="name" id="name" type="text" placeholder="Enter Experience_level" value="{{ old('name')  ??  $experience_level->name ?? '' }}" required>
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $name }}</strong>
