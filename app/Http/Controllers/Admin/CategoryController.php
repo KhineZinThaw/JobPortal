@@ -15,6 +15,8 @@ class CategoryController extends Controller
     //     $this->middleware('auth:admin');
     //     $this->middleware('role:super');
     // }
+
+    //categories
     
     public function index()
     {
